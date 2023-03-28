@@ -2,13 +2,15 @@ macro_refresh: macro_refresh{
 compatible = "zmk,behavior-macro";
 label = "macro_refresh";
 #binding-cells = <0>;
-bindings = <&kp LEFT_COMMAND &kp R>;
+wait-ms = <0>;
+bindings = <&macro_press &kp LEFT_COMMAND &kp R>, <&macro_pause_for_release>, <&macro_release &kp LEFT_COMMAND &kp R>;
 };
 macro_farm: macro_farm{
 compatible = "zmk,behavior-macro";
 label = "macro_farm";
 #binding-cells = <0>;
-bindings = <&kp LEFT_COMMAND &kp APOSTROPHE>;
+wait-ms = <0>;
+bindings = <&macro_press &kp LEFT_COMMAND &kp APOSTROPHE>, <&macro_pause_for_release>, <&macro_release &kp LEFT_COMMAND &kp APOSTROPHE>;
 };
 macro_quotes: macro_quotes{
 compatible = "zmk,behavior-macro";
